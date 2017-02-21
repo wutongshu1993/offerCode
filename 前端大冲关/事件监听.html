@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #panel{
+            border: 1px solid black;
+        }
+        a{
+            display: inline-block;
+            background-color: aqua;
+            width: 100px;
+            height: 100px;
+        }
+        span{
+            background-color: antiquewhite;
+        }
+    </style>
+</head>
+<body>
+<div id="panel">
+    <a><span><span>你好</span></span></a>
+    <a><span>你好</span></a>
+    <button id="btn">h</button>
+</div>
+    <script src="jquery-3.1.0.js"></script>
+    <script>
+   $('#panel a').bind('click',function () {
+       alert(event.target.nodeName);
+   } )
+     $("#btn").click(function () {
+         alert(this.id);
+     })
+</script>
+</body>
+</html>

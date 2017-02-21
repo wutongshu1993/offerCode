@@ -14,14 +14,14 @@ function FindKthToTail(head, k)
     var slow = head;
     var fast = head;
     if(head == null || k <=0){
-        return new Object({});
+        return Object.create(null);
     }
     while (fast != null && k > 1){
         fast = fast.next;
         k--;
     }
     if(fast == null){
-        return new Object({});
+        return Object.create(null);
     }
     while(fast != null && fast.next != null){
         slow = slow.next;
